@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PP_Cpp_Lesson01",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PP_Cpp_Lesson01::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PP_Cpp_Lesson01-Debug-b22499aa72c0a3caf9f7.json",
+					"name" : "PP_Cpp_Lesson01",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/alexandr/Документы/git/PP_C++/01/build-PP_Cpp_Lesson01-Desktop-Debug",
+		"source" : "/home/alexandr/Документы/git/PP_C++/01/PP_Cpp_Lesson01"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 2
+	}
+}

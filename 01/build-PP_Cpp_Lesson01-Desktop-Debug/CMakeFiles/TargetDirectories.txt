@@ -1,0 +1,3 @@
+/home/alexandr/Документы/git/PP_C++/01/build-PP_Cpp_Lesson01-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/alexandr/Документы/git/PP_C++/01/build-PP_Cpp_Lesson01-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/alexandr/Документы/git/PP_C++/01/build-PP_Cpp_Lesson01-Desktop-Debug/CMakeFiles/PP_Cpp_Lesson01.dir
