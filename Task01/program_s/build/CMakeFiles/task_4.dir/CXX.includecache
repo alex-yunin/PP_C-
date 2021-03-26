@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/task_4.h
+iostream
+-
+
+/home/alexandr/Документы/git/PP_C++/Task01/program_s/src/task_4.cpp
+task_4.h
+/home/alexandr/Документы/git/PP_C++/Task01/program_s/src/task_4.h
+

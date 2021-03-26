@@ -1,0 +1,274 @@
+//Курс: "Процедурное программирование и основы С++".
+//Студент: Александр Юнин
+//Выполнение Практического задания к первому уроку.
+
+
+
+//Задание 1:
+
+alexandr@Alex-Linux:~ $ qtcreator -version
+qt5ct: using qt5ct plugin
+
+Qt Creator 4.5.2 based on Qt 5.9.5
+
+  Android 4.5.2 Support for deployment to and execution on Android Devices.
+  AutoTest 4.5.2 Auto Test plugin.
+  AutotoolsProjectManager 4.5.2 Autotools project integration.
+  BareMetal 4.5.2 This plugin adds a target for bare metal development.
+  Bazaar 4.5.2 Bazaar integration.
+  Beautifier 4.5.2 Format source files with the help of beautifiers like AStyle, uncrustify or clang-format.
+  BinEditor 4.5.2 Binary editor component.
+  Bookmarks 4.5.2 Bookmarks in text editors.
+  CMakeProjectManager 4.5.2 CMake support.
+  CVS 4.5.2 CVS integration.
+  ClangCodeModel 4.5.2 Clang Code Model plugin.
+  ClangStaticAnalyzer 4.5.2 ClangStaticAnalyzer Plugin.
+  ClassView 4.5.2 Class View component.
+  ClearCase 4.5.2 ClearCase integration.
+  CodePaster 4.5.2 Codepaster plugin for pushing/fetching diff from server.
+  Core 4.5.2 The core plugin for the Qt IDE.
+  CppEditor 4.5.2 C/C++ editor component.
+  CppTools 4.5.2 Tools for analyzing C/C++ code.
+  Debugger 4.5.2 Debugger integration.
+  Designer 4.5.2 Qt Designer integration.
+  DiffEditor 4.5.2 Diff editor component.
+  EmacsKeys 4.5.2 The main idea behind this plugin is to provide additional actions a typical emacs user would expect. It doesn't claim to provide full emacs emulation. The following actions are available:
+ - Movement [C-f, C-b, C-n, C-p, M-f, M-b, C-a, C-e, M-<, M->]
+ - Mark-based selection [C-SPC, C-x C-x]
+ - Cut/copy/yank (doesn't provide kill ring feature) [M-w, C-w, C-y]
+ - Kill actions, which interact properly with clipboard [C-k, M-d, C-d]
+ - Scrolling (half of the screen, keeps cursor visible) [C-v, M-v]
+ - Insert new line and indent [C-j]
+
+IMPORTANT: Actions are not bound to any key combinations by default. You can find them under 'EmacsKeys' section in keyboard shortcuts settings.
+
+Also it's worth mentioning that EmacsKeys plugin forces disabling of menu mnemonics by calling Qt's qt_set_sequence_auto_mnemonic function with false argument. Many of the english menu mnemonics get into the way of typical emacs keys, this includes: Alt+F (File), Alt+B (Build), Alt+W (Window). It's a temporary solution, it remains until there is a better one.
+  FakeVim 4.5.2 VI-style keyboard navigation.
+  GLSLEditor 4.5.2 Editor for GLSL.
+  GenericProjectManager 4.5.2 Generic support.
+  Git 4.5.2 Git integration.
+  Help 4.5.2 Help system.
+  ImageViewer 4.5.2 Image Viewer component.
+  Ios 4.5.2 Support for deployment to and execution on iOS Devices.
+  Macros 4.5.2 Macros in text editors.
+  Mercurial 4.5.2 Mercurial integration.
+  ModelEditor 4.5.2 Graphical modeling with structured diagrams.
+  Nim 4.5.2 Plugin for supporting the Nim programming language.
+  Perforce 4.5.2 Perforce integration.
+  ProjectExplorer 4.5.2 ProjectExplorer framework that can be extended with different kind of project types.
+  PythonEditor 4.5.2 Editor and file creation wizards for Python. Example plugin for QtCreator API demonstration.
+  QbsProjectManager 4.5.2 QBS support.
+  QmakeAndroidSupport 4.5.2 Android support for qmake project manager.
+  QmakeProjectManager 4.5.2 Provides project type for Qt/QMake .pro files and tools.
+  QmlDesigner 4.5.2 Visual Designer for QML files.
+  QmlJSEditor 4.5.2 Editor for QML and JavaScript.
+  QmlJSTools 4.5.2 Tools for analyzing Qml/JS code.
+  QmlProfiler 4.5.2 Qml Profiler Plugin.
+  QmlProjectManager 4.5.2 Qt Quick support
+  Qnx 4.5.2 Adds support for QNX to Qt Creator.
+  QtSupport 4.5.2 Provides support code for build systems.
+  RemoteLinux 4.5.2 Support for deployment to and execution on a remote Linux host.
+  ResourceEditor 4.5.2 Editor for qrc files.
+  ScxmlEditor 4.5.2 Visual Editor for SCXML (State Chart XML) files.
+  SilverSearcher 4.5.2 Adds possibility to use SilverSearcher tool as an alternative mechanism of find in files
+  Subversion 4.5.2 Subversion integration.
+  TaskList 4.5.2 Use .tasks-files to populate the Issues view.
+  TextEditor 4.5.2 Text editor framework and the implementation of the basic text editor.
+  Todo 4.5.2 Adds pane that lists all TODO, FIXME, etc. entries in comments.
+  UpdateInfo 4.5.2 Displays Update-Infos for Qt Installer Framework-based Updaters.
+  Valgrind 4.5.2 Valgrind Plugin.
+  VcsBase 4.5.2 Version Control System Base Plugin.
+  Welcome 4.5.2 Secondary Welcome Screen Plugin.
+  WinRt 4.5.2 Helper for Windows Runtime projects.
+
+(C) 2018 The Qt Company Ltd
+
+alexandr@Alex-Linux:~ $ cmake --version
+cmake version 3.10.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+alexandr@Alex-Linux:~ $ gcc --version
+gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+alexandr@Alex-Linux:~ $ clang --version
+clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final)
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+alexandr@Alex-Linux:~ $ 
+
+
+//Задание 2:
+
+//Текст программы:
+#include <iostream>
+#define IT_WORKS "It works!"
+using namespace std;
+
+int main(int argc, char** args)
+{
+    const int SUCCESS = 0;
+    cout << IT_WORKS << endl;
+    cout << "Sample string \n\t Sample string 2" << endl;
+    cout << "Sample string \rSample string 2" << endl;
+    return SUCCESS;
+}
+
+//Вывод программы:
+It works!
+Sample string 
+	 Sample string 2
+Sample string 2
+
+
+
+//Задание 3:
+
+alexandr@Alex-Linux:~ $ sudo apt install ghex
+Чтение списков пакетов… Готово
+Построение дерева зависимостей       
+Чтение информации о состоянии… Готово
+Уже установлен пакет ghex самой новой версии (3.18.3-3).
+Следующие пакеты устанавливались автоматически и больше не требуются:
+  audacious-plugins audacious-plugins-data gir1.2-mate-desktop
+  gir1.2-mate-panel libaudcore5 libaudgui5 libaudtag3 libcue1 libllvm7
+  libllvm7:i386 libwine-development linux-headers-4.15.0-112
+  linux-headers-4.15.0-112-generic linux-headers-4.15.0-115
+  linux-headers-4.15.0-115-generic linux-headers-4.15.0-117
+  linux-headers-4.15.0-117-generic linux-headers-4.15.0-118
+  linux-headers-4.15.0-118-generic linux-headers-4.15.0-121
+  linux-headers-4.15.0-121-generic linux-headers-4.15.0-122
+  linux-headers-4.15.0-122-generic linux-headers-4.15.0-124
+  linux-headers-4.15.0-124-generic linux-headers-4.15.0-126
+  linux-headers-4.15.0-126-generic linux-headers-4.15.0-132
+  linux-headers-4.15.0-132-generic linux-headers-4.15.0-134
+  linux-headers-4.15.0-134-generic linux-headers-4.15.0-135
+  linux-headers-4.15.0-135-generic linux-headers-5.4.0-42-generic
+  linux-headers-5.4.0-45-generic linux-headers-5.4.0-47-generic
+  linux-headers-5.4.0-48-generic linux-headers-5.4.0-51-generic
+  linux-headers-5.4.0-52-generic linux-headers-5.4.0-54-generic
+  linux-headers-5.4.0-56-generic linux-headers-5.4.0-62-generic
+  linux-headers-5.4.0-64-generic linux-hwe-5.4-headers-5.4.0-42
+  linux-hwe-5.4-headers-5.4.0-45 linux-hwe-5.4-headers-5.4.0-47
+  linux-hwe-5.4-headers-5.4.0-48 linux-hwe-5.4-headers-5.4.0-51
+  linux-hwe-5.4-headers-5.4.0-52 linux-hwe-5.4-headers-5.4.0-54
+  linux-hwe-5.4-headers-5.4.0-56 linux-hwe-5.4-headers-5.4.0-62
+  linux-hwe-5.4-headers-5.4.0-64 linux-image-4.15.0-112-generic
+  linux-image-4.15.0-115-generic linux-image-4.15.0-117-generic
+  linux-image-4.15.0-118-generic linux-image-4.15.0-121-generic
+  linux-image-4.15.0-122-generic linux-image-4.15.0-124-generic
+  linux-image-4.15.0-126-generic linux-image-4.15.0-132-generic
+  linux-image-4.15.0-134-generic linux-image-4.15.0-135-generic
+  linux-image-5.4.0-42-generic linux-image-5.4.0-45-generic
+  linux-image-5.4.0-47-generic linux-image-5.4.0-48-generic
+  linux-image-5.4.0-51-generic linux-image-5.4.0-52-generic
+  linux-image-5.4.0-54-generic linux-image-5.4.0-56-generic
+  linux-image-5.4.0-62-generic linux-image-5.4.0-64-generic
+  linux-modules-4.15.0-112-generic linux-modules-4.15.0-115-generic
+  linux-modules-4.15.0-117-generic linux-modules-4.15.0-118-generic
+  linux-modules-4.15.0-121-generic linux-modules-4.15.0-122-generic
+  linux-modules-4.15.0-124-generic linux-modules-4.15.0-126-generic
+  linux-modules-4.15.0-132-generic linux-modules-4.15.0-134-generic
+  linux-modules-4.15.0-135-generic linux-modules-5.4.0-42-generic
+  linux-modules-5.4.0-45-generic linux-modules-5.4.0-47-generic
+  linux-modules-5.4.0-48-generic linux-modules-5.4.0-51-generic
+  linux-modules-5.4.0-52-generic linux-modules-5.4.0-54-generic
+  linux-modules-5.4.0-56-generic linux-modules-5.4.0-62-generic
+  linux-modules-5.4.0-64-generic linux-modules-extra-4.15.0-112-generic
+  linux-modules-extra-4.15.0-115-generic
+  linux-modules-extra-4.15.0-117-generic
+  linux-modules-extra-4.15.0-118-generic
+  linux-modules-extra-4.15.0-121-generic
+  linux-modules-extra-4.15.0-122-generic
+  linux-modules-extra-4.15.0-124-generic
+  linux-modules-extra-4.15.0-126-generic
+  linux-modules-extra-4.15.0-132-generic
+  linux-modules-extra-4.15.0-134-generic
+  linux-modules-extra-4.15.0-135-generic linux-modules-extra-5.4.0-42-generic
+  linux-modules-extra-5.4.0-45-generic linux-modules-extra-5.4.0-47-generic
+  linux-modules-extra-5.4.0-48-generic linux-modules-extra-5.4.0-51-generic
+  linux-modules-extra-5.4.0-52-generic linux-modules-extra-5.4.0-54-generic
+  linux-modules-extra-5.4.0-56-generic linux-modules-extra-5.4.0-62-generic
+  linux-modules-extra-5.4.0-64-generic python-lzma python-parsley
+  python-txsocksx wine64-development
+Для их удаления используйте «sudo apt autoremove».
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 0 пакетов не обновлено.
+alexandr@Alex-Linux:~ $ 
+
+
+//Задание 4:
+
+//Текст программы:
+#include "task_4.h"
+
+using namespace std;
+
+int main()
+{
+    cout << IT_WORKS << endl;
+    cout << "Sample string \n\t Sample string 2" << endl;
+    cout << "Sample string \rSample string 2" << endl;
+    cout << CONST_2 << endl;
+    return 0;
+}
+
+//Текст файла 'task_4.h':
+#include <iostream>
+#define IT_WORKS "It works!"
+#define CONST_2 "Ещё одна константа :) "
+
+//Текст файла 'CMakeLists.txt':
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+PROJECT(task_4)
+
+add_executable(task_4 src/task_4.cpp)
+
+target_include_directories(task_4 PRIVATE include)
+
+//Работа в командной строке:
+alexandr@Alex-Linux:~ $ cd /home/alexandr/Документы/git/PP_C++/Task01/program_s
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s (master)$ mkdir build include src
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s (master)$ ls
+build  include  src
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s (master)$ touch include/task_4.h
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s (master)*$ touch CMakeLists.txt
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s (master)*$ cd build
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s/build (master)*$ cmake ../
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alexandr/Документы/git/PP_C++/Task01/program_s/build
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s/build (master)*$ ls
+CMakeCache.txt  CMakeFiles  cmake_install.cmake  Makefile
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s/build (master)*$ make
+Scanning dependencies of target task_4
+[ 50%] Building CXX object CMakeFiles/task_4.dir/src/task_4.cpp.o
+[100%] Linking CXX executable task_4
+[100%] Built target task_4
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s/build (master)*$ ls
+CMakeCache.txt  CMakeFiles  cmake_install.cmake  Makefile  task_4
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s/build (master)*$ ./task_4
+It works!
+Sample string 
+	 Sample string 2
+Sample string 2
+Ещё одна константа :) 
+alexandr@Alex-Linux:~/Документы/git/PP_C++/Task01/program_s/build (master)*$ 
+
