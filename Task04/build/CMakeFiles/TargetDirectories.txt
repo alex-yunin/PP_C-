@@ -1,0 +1,3 @@
+/home/alexandr/Документы/git/PP_C++/Task04/build/CMakeFiles/rebuild_cache.dir
+/home/alexandr/Документы/git/PP_C++/Task04/build/CMakeFiles/edit_cache.dir
+/home/alexandr/Документы/git/PP_C++/Task04/build/CMakeFiles/task04.dir
